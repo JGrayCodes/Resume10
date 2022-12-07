@@ -1,27 +1,76 @@
-* {box-sizing: border-box;}
-
-body{
-    background-color: #1d5458;
-    color:#4bbbc3;
+* {
+    box-sizing: border-box;
 }
 
-h1, h2 { font-family: Arial, Helvetica, sans-serif}
+body {
+    background-color: #1d5458;
+    color: #4bbbc3;
+}
+
+h1,h2 {
+    font-family: Arial, Helvetica, sans-serif
+}
 
 /* styling targeting all the navbar text*/
-.navbarBrandName, .nav-link {
+.navbarBrandName,
+.nav-link {
     color: #4bbbc3;
     font-size: 125%
-   }
+}
 
-/*link changes from blue to black and bold (if not bold already) when mouse hovers over it*/
+/*link changes from blue to a different blue shade and bold (if not bold already) when mouse hovers over it*/
 a:hover {
     color: #54d2db;
     font-weight: bold;
-  }
-  
-  /*link changes from blue/black to black and bold (if not bold already) when mouse clicks it*/
-  a:active {
-    color: rgb(223, 229, 234) ;
+}
+
+/*link changes from blue to a very light gray and bold (if not bold already) when mouse clicks it*/
+a:active {
+    color: rgb(223, 229, 234);
     font-weight: bold;
-  }
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+  }  
   
+  /* The first element to apply the animation to */
+#githubLogo {
+    margin: 1%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#githubLogo:hover {
+    animation-name: githubLogo;
+    animation-duration: 2s;
+}
+
+/* The animation code to rotate the image in 90degree increments */
+@keyframes githubLogo {
+    0% {
+        border-radius: 50%;
+    }
+
+    20% {
+        transform: rotate(90deg);
+    }
+
+    40% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(270deg);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        border-radius: 50%;
+    }
+}
