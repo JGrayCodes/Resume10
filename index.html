@@ -41,8 +41,10 @@
         <!-- Bootstrap Navigation bar code follows-->
         <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/julieAsHermione2.jpg" alt="smallProfilePic" width="40"
-                        height="32" class="d-inline-block align-text-bottom"> <span class="navbarBrandName"> Julie Gray</span>
+                <a class="navbar-brand" aria-current="page" href="#"><img src="images/julieAsHermione2.jpg"
+                        alt="smallProfilePic" width="40" height="32" class="d-inline-block align-text-center"> <span
+                        class="navbarBrandName"> Julie
+                        Gray</span> <!-- This navbar link takes you to the top of the page-->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDarkNav"
                     data-bs-auto-close="outside" aria-controls="navbarDarkNav" aria-expanded="false"
@@ -51,11 +53,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarDarkNav">
                     <ul class="navbar-nav mx-auto">
-                        <!-- mx-auto -->
-                        <!--
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About Me</a>
                         </li>
@@ -98,112 +95,172 @@
                     Education) which incorporates HTML, CSS and Bootstrap </p>
 
             </section>
-            <!-- Education section follows below-->
+
+            <!-- Education section follows below in a bootstrap grid with 2 columns-->
             <section>
                 <h2 id="education">Education and Certificates</h2>
-
-                <h3> Intro to Web at
-                    <a href="https://www.codespace.co.za/" rel="noopener noreferrer nofollow" target="blank">
-                        Codespace Academy
-                    </a>
-                </h3>
-                <p> I am currently studying towards a Certificate in Software Development and have just completed the
-                    first
-                    section namely "Intro to Web" and am busy with Web Design.
-                </p>
-
-                <h3> BComm (Accounting Sciences) at the University of Pretoria</h3>
-                <p> I completed the degree <em>Baccalaureus Commercii</em> with specialization in Accounting Sciences at
-                    the
-                    end of 2009.
-                </p>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <h3> Intro to Web at
+                                <a href="https://www.codespace.co.za/" rel="noopener noreferrer nofollow"
+                                    target="blank"> Codespace Academy
+                                </a>
+                            </h3>
+                            <p> I am currently studying towards a Certificate in Software Development and have just
+                                completed the first section namely "Intro to Web" and am busy with Web Design.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <h3> BComm (Accounting Sciences) at the University of Pretoria</h3>
+                            <p> I completed the degree <em>Baccalaureus Commercii</em> with specialization in Accounting
+                                Sciences at the end of 2009.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
-            <!-- Experience section follows below-->
+            <!-- Experience section follows below broken into card in grid system of 2 columns of equal height and going to 1 column when screen size gets smaller -->
             <section>
                 <h2 id="experience">Experience</h2>
+                <div class="container">
+                    <div class="row justify-content-evenly g-5">
 
-                <h3> Training Coordinator at LifeLine Pretoria</h3>
-                <h4> Key Duties</h4>
-                <ul>
-                    <li> Sending course information and the link to the online registration form to prospective course
-                        participants,
-                        attending to any course queries, and updating the mailing lists.</li>
-                    <li> Collating the registration information for course participants and liaising with the Accounts
-                        Department
-                        to follow up on whether payment had been received and following up on arrear payments.</li>
-                    <li> Coordinating Volunteers as
-                        <ul>
-                            <li>Facilitators for the online Personal Growth Courses, and</li>
-                            <li>Trainers for the online Counselling Skills Courses</li>
-                        </ul>
-                    <li> Sending out the course material and other necessary information
-                        to the course participants and facilitators/trainers</li>
-                    <li> Scheduling and hosting the above-mentioned online courses, taking attendance of the course
-                        participants,
-                        and assisting the course participants and facilitators/trainers with any technical issues
-                        while in the courses on Zoom.</li>
-                    <li> Coordinating Volunteers as Panel Members for interviews for the
-                        <ul>
-                            <li>selection of candidates into the probationary lay counsellors program at LifeLine
-                                Pretoria , and</li>
-                            <li>selection of probationers into LifeLine Pretoria as Full Lay Counsellors</li>
-                        </ul>
-                    </li>
-                    <li> Creating and mailing the details of course participants to professional printers
-                        for the printing of the course certificates.</li>
-                </ul>
+                        <div class="col-md-5">
+                            <div class="card text-bg-dark h-100">
+                                <img src="images/LifeLineLogo.jpg" class="card-img-top" alt="LifeLine Logo">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center"> Training Coordinator at LifeLine Pretoria</h3>
+                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <ul class="card-text">
+                                        <li> Sending course information and the link to the online registration form to
+                                            prospective course
+                                            participants,
+                                            attending to any course queries, and updating the mailing lists.</li>
+                                        <li> Collating the registration information for course participants and liaising
+                                            with the Accounts
+                                            Department
+                                            to follow up on whether payment had been received and following up on arrear
+                                            payments.</li>
+                                        <li> Coordinating Volunteers as
+                                            <ul>
+                                                <li>Facilitators for the online Personal Growth Courses, and</li>
+                                                <li>Trainers for the online Counselling Skills Courses</li>
+                                            </ul>
+                                        <li> Sending out the course material and other necessary information
+                                            to the course participants and facilitators/trainers</li>
+                                        <li> Scheduling and hosting the above-mentioned online courses, taking
+                                            attendance of the course
+                                            participants,
+                                            and assisting the course participants and facilitators/trainers with any
+                                            technical issues
+                                            while in the courses on Zoom.</li>
+                                        <li> Coordinating Volunteers as Panel Members for interviews for the
+                                            <ul>
+                                                <li>selection of candidates into the probationary lay counsellors
+                                                    program at LifeLine
+                                                    Pretoria , and</li>
+                                                <li>selection of probationers into LifeLine Pretoria as Full Lay
+                                                    Counsellors</li>
+                                            </ul>
+                                        </li>
+                                        <li> Creating and mailing the details of course participants to professional
+                                            printers
+                                            for the printing of the course certificates.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <h3> Rental Manager at Limestone Residential Properties</h3>
-                <h4> Key Duties</h4>
-                <ul>
-                    <li> Managing a portfolio of properties (managed and once off leases) on PropWorx Property
-                        Management
-                        Software and TPN Credit Bureau </li>
-                    <li> Performing credit checks on prospective tenants via the TPN Credit Bureau</li>
-                    <li> Loading and updating lease and payment information onto the PropWorx Property Management
-                        Software
-                        and the TPN Credit Bureau </li>
-                    <li> Invoicing tenants, receipting rental, processing landlord payments and emailing landlord and
-                        tenant
-                        statements</li>
-                    <li> Advising the maintenance coordinator of property maintenance issues </li>
-                    <li> Reconciling owner, tenant, and municipal accounts</li>
-                    <li> Calculating and submitting agent commissions for payment</li>
-                    <li> Calculating and loading rental and other costs due for debit order collection</li>
-                    <li> Importing trust account bank statements into PropWorx and performing bank account
-                        reconciliations
-                    </li>
-                </ul>
-
-                <h3> Bookkeeper at VG Inhouse Services T/A Seeff Rentals/Huurkor Properties Pretoria East</h3>
-                <h4> Key Duties</h4>
-                <ul>
-                    <li> Loading lease information onto the PropWorx Property Management System as well as loading and
-                        submitting payments and charges from rental received.</li>
-                    <li> Emailing statements to owners and tenants, and liaising with clients regarding account queries.
-                    </li>
-                    <li> Reconciling owner, tenant and municipal accounts.</li>
-                    <li> Debtors Reconciliation and Debt Collection</li>
-                    <li> Creditors Reconciliation and submission of amounts due for payments.</li>
-                    <li> Calculating and submitting agent commissions and salaries for payment.</li>
-                    <li> Calculating and submitting VAT returns and payments.</li>
-                    <li> Calculating and submitting PAYE returns and payments.</li>
-                    <li> Importing bank statements into PropWorx and performing bank account reconciliations.</li>
-                </ul>
-
-                <h3> General Finance Executive at Sumtaka Tours T/A A2BTransfers.com</h3>
-                <h4> Key Duties</h4>
-                <ul>
-                    <li> Performing Debtors Reconciliations</li>
-                    <li> Performing Creditors Reconciliation</li>
-                    <li> Performing Credit Card Receipt Reconciliations</li>
-                    <li> Calculating and submitting Euro VAT claims</li>
-                    <li> Authorizing refunds or compensation to clients</li>
-                    <li> Capturing bank statements on Pastel and and performing bank account reconciliations
-                    </li>
-                </ul>
+                        <div class="col-md-5">
+                            <div class="card text-bg-dark h-100">
+                                <img src="images/LimestoneLogo.jpg" class="card-img-top"
+                                    alt="Limestone Residential Properties Logo">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">Rental Manager at Limestone Residential
+                                        Properties</h3>
+                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <ul class="card-text">
+                                        <li> Managing a portfolio of properties (managed and once off leases) on
+                                            PropWorx Property
+                                            Management
+                                            Software and TPN Credit Bureau </li>
+                                        <li> Performing credit checks on prospective tenants via the TPN Credit
+                                            Bureau</li>
+                                        <li> Loading and updating lease and payment information onto the PropWorx
+                                            Property Management
+                                            Software
+                                            and the TPN Credit Bureau </li>
+                                        <li> Invoicing tenants, receipting rental, processing landlord payments and
+                                            emailing landlord and
+                                            tenant
+                                            statements</li>
+                                        <li> Advising the maintenance coordinator of property maintenance issues
+                                        </li>
+                                        <li> Reconciling owner, tenant, and municipal accounts</li>
+                                        <li> Calculating and submitting agent commissions for payment</li>
+                                        <li> Calculating and loading rental and other costs due for debit order
+                                            collection</li>
+                                        <li> Importing trust account bank statements into PropWorx and performing
+                                            bank account
+                                            reconciliations
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card text-bg-dark h-100">
+                                <img src="images/SeeffLogo.jpg" class="card-img-top" alt="Seeff Properties Logo">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center"> Bookkeeper at Seeff Rentals Pretoria East</h3>
+                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <ul class="card-text">
+                                        <li> Loading lease information onto the PropWorx Property Management System as
+                                            well as loading
+                                            and
+                                            submitting payments and charges from rental received.</li>
+                                        <li> Emailing statements to owners and tenants, and liaising with clients
+                                            regarding account
+                                            queries.
+                                        </li>
+                                        <li> Reconciling owner, tenant and municipal accounts.</li>
+                                        <li> Debtors Reconciliation and Debt Collection</li>
+                                        <li> Creditors Reconciliation and submission of amounts due for payments.</li>
+                                        <li> Calculating and submitting agent commissions and salaries for payment.</li>
+                                        <li> Calculating and submitting VAT returns and payments.</li>
+                                        <li> Calculating and submitting PAYE returns and payments.</li>
+                                        <li> Importing bank statements into PropWorx and performing bank account
+                                            reconciliations.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card text-bg-dark h-100">
+                                <img src="images/A2BtransfersDotComLogo.jpg" class="card-img-top"
+                                    alt="A2BtransfersDotCom Logo">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center"> General Finance Executive at A2BTransfers.com
+                                    </h3>
+                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <ul class="card-text">
+                                        <li> Performing Debtors Reconciliations</li>
+                                        <li> Performing Creditors Reconciliation</li>
+                                        <li> Performing Credit Card Receipt Reconciliations</li>
+                                        <li> Calculating and submitting Euro VAT claims</li>
+                                        <li> Authorizing refunds or compensation to clients</li>
+                                        <li> Capturing bank statements on Pastel and and performing bank account
+                                            reconciliations
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
@@ -242,10 +299,11 @@
 
     <footer>
         <a href="https://github.com/JGrayCodes" rel="noopener noreferrer" target="_blank">
-                <div>
-                    <img id="githubLogo" src="images/githubLogo.jpg" alt="Github logo of a black cat silhouette on a white circular background"> 
-                    <!-- need to give image an id to target image properties specifically (e.g. border-radius) in css-->
-                </div>
+            <div>
+                <img id="githubLogo" src="images/githubLogo.jpg"
+                    alt="Github logo of a black cat silhouette on a white circular background">
+                <!-- need to give image an id to target image properties specifically (e.g. border-radius) in css-->
+            </div>
         </a>
 
 

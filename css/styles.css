@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #1d5458;
+    background-color: white;
     color: #4bbbc3;
 }
 
@@ -15,7 +15,7 @@ h1,h2 {
 .navbarBrandName,
 .nav-link {
     color: #4bbbc3;
-    font-size: 125%
+    font-size: 125%;
 }
 
 /*link changes from blue to a different blue shade and bold (if not bold already) when mouse hovers over it*/
@@ -29,6 +29,11 @@ a:active {
     color: rgb(223, 229, 234);
     font-weight: bold;
 }
+
+.card-title, .cardSubTitle, .card-text {
+    color: #4bbbc3
+}
+
 
 footer {
     text-align: center;
