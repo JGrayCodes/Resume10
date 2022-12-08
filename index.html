@@ -16,9 +16,9 @@
 
     <header>
         <div class="jumbotron jumbotron-fluid responsive">
-            <div class="container-jumbo">
+            <div class="container-jumbo justify-content-center align-items-center">
                 <h1 class="display-6 fw-semibold" id="jumbotronHeader1">Hello World! I'm Julie Gray</h1>
-                <h2 class="display-6"id="jumbotronHeader2">Welcome to my Resumé.</h2>
+                <p class="display-6" id="jumbotronHeader2">Welcome to my Resumé.</p>
             </div>
         </div>
 
@@ -40,7 +40,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarDarkNav">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav ms-auto">
+                        <!--use bootstrap class of ms-auto to align items to the right!-->
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About Me</a>
                         </li>
@@ -57,9 +58,7 @@
                             <a class="nav-link" href="#interests">Interests</a>
                         </li>
 
-                        <!--<li class="nav-item">
-        <a class="nav-link">Disabled</a>
-      </li> -->
+
                     </ul>
                 </div>
             </div>
@@ -70,11 +69,11 @@
             <!-- More about me follows below-->
             <section>
                 <h2 id="about">More About Me</h2>
-                <h3> Hi, Im Julie (but you can call me Jules) </h3>
+                <h3> Hi, I'm Julie (but you can call me Jules) </h3>
                 <p> I am a dedicated, responsible, hard-working, and creative-thinking individual with a friendly
                     personality and
                     a good sense of humour.</p>
-                <p> Currently, I'm on a journey to become a full-stack web developer. I love to problem solve and coding
+                <p> Currently, I'm on a journey to become a full-stack web developer. I love to problem solve and I find that coding
                     is a great way to engage in this activity! </p>
                 <p> In fact, what you are viewing now is a resumé project for my current course (for more, see under
                     Education) which incorporates HTML, CSS and Bootstrap </p>
@@ -107,66 +106,44 @@
 
             </section>
 
-            <!-- Experience section follows below broken into card in grid system of 2 columns of equal height and going to 1 column when screen size gets smaller -->
+            <!-- Experience section follows below broken into card in grid system of 4 columns of equal height 
+                 and going to 2 columns then 1 column when screen size gets smaller -->
             <section>
                 <h2 id="experience">Experience</h2>
                 <div class="container">
-                    <div class="row justify-content-evenly g-5">
-
-                        <div class="col-md-5">
+                    <div class="row justify-content-evenly g-2">
+                        <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/LifeLineLogo.jpg" class="card-img-top" alt="LifeLine Logo">
                                 <div class="card-body">
-                                    <h3 class="card-title text-center"> Training Coordinator at LifeLine Pretoria</h3>
-                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <h3 class="card-title mb-3 text-center"> Training Coordinator at LifeLine Pretoria</h3>
+                                    <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
                                     <ul class="card-text">
-                                        <li> Sending course information and the link to the online registration form to
-                                            prospective course
-                                            participants,
-                                            attending to any course queries, and updating the mailing lists.</li>
+                                        <li> Attending to any course queries by prospective course participants, and updating the mailing lists.</li>
                                         <li> Collating the registration information for course participants and liaising
-                                            with the Accounts
-                                            Department
-                                            to follow up on whether payment had been received and following up on arrear
-                                            payments.</li>
-                                        <li> Coordinating Volunteers as
-                                            <ul>
-                                                <li>Facilitators for the online Personal Growth Courses, and</li>
-                                                <li>Trainers for the online Counselling Skills Courses</li>
-                                            </ul>
+                                            with the Accounts Department to follow up on arrear payments.</li>
+                                        <li> Coordinating Volunteers as presenters for the online courses.</li>
                                         <li> Sending out the course material and other necessary information
-                                            to the course participants and facilitators/trainers</li>
-                                        <li> Scheduling and hosting the above-mentioned online courses, taking
-                                            attendance of the course
-                                            participants,
+                                            to the course participants and facilitators/trainers.</li>
+                                        <li> Scheduling and hosting the above-mentioned online courses, 
                                             and assisting the course participants and facilitators/trainers with any
-                                            technical issues
-                                            while in the courses on Zoom.</li>
-                                        <li> Coordinating Volunteers as Panel Members for interviews for the
-                                            <ul>
-                                                <li>selection of candidates into the probationary lay counsellors
-                                                    program at LifeLine
-                                                    Pretoria , and</li>
-                                                <li>selection of probationers into LifeLine Pretoria as Full Lay
-                                                    Counsellors</li>
-                                            </ul>
-                                        </li>
-                                        <li> Creating and mailing the details of course participants to professional
-                                            printers
-                                            for the printing of the course certificates.</li>
+                                            technical issues while in the courses on Zoom.</li>
+                                        <li> Coordinating Volunteers as Panel Members for interviews for selection as either 
+                                            a probationary lay counsellors or as a full lay counsellors.</li>
+                                        <li> Collating the details of course participants 
+                                            for the printing of the course certificates after the successful completion of a course.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/LimestoneLogo.jpg" class="card-img-top"
                                     alt="Limestone Residential Properties Logo">
                                 <div class="card-body">
-                                    <h3 class="card-title text-center">Rental Manager at Limestone Residential
-                                        Properties</h3>
-                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <h3 class="card-title mb-3 text-center">Rental Manager at Limestone Properties</h3>
+                                    <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
                                     <ul class="card-text">
                                         <li> Managing a portfolio of properties (managed and once off leases) on
                                             PropWorx Property
@@ -196,12 +173,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/SeeffLogo.jpg" class="card-img-top" alt="Seeff Properties Logo">
                                 <div class="card-body">
-                                    <h3 class="card-title text-center"> Bookkeeper at Seeff Rentals Pretoria East</h3>
-                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <h3 class="card-title mb-3 text-center"> Bookkeeper at Seeff Rentals Pretoria East</h3>
+                                    <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
                                     <ul class="card-text">
                                         <li> Loading lease information onto the PropWorx Property Management System as
                                             well as loading
@@ -223,14 +200,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/A2BtransfersDotComLogo.jpg" class="card-img-top"
                                     alt="A2BtransfersDotCom Logo">
                                 <div class="card-body">
-                                    <h3 class="card-title text-center"> General Finance Executive at A2BTransfers.com
+                                    <h3 class="card-title mb-3 text-center"> General Finance Executive at A2BTransfers.com
                                     </h3>
-                                    <h4 class="cardSubTitle"> Key Duties</h4>
+                                    <h4 class="card-subtitle mb-3 text-center "> Key Duties</h4>
                                     <ul class="card-text">
                                         <li> Performing Debtors Reconciliations</li>
                                         <li> Performing Creditors Reconciliation</li>

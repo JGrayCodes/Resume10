@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: black;
     color: #4bbbc3;
 }
 
@@ -19,16 +19,18 @@ which needs to be the full width of the page*/
     height: 30vh;
 }
 
-/*h1 and h2 is styled before media queriers have been included*/
+/*h1 and p are styled before media queriers are included*/
+
 .jumbotron h1 {
     color: #4bbbc3;
-    margin-left: 18vw;
-    line-height: 1.5;
+    text-align: center;
+    padding-top: 7vh;
 }
 
-.jumbotron h2 {
+.jumbotron p {
     color: #4bbbc3;
-    margin-left: 22vw;
+    text-align: center;
+
 }
 
 
@@ -38,10 +40,33 @@ which needs to be the full width of the page*/
 
 }
 
-/*media queries needed for jumbotron picture in mobile view*/
-@media only screen and (max-width: 480px) {
+/*media queries needed for jumbotron picture in mobile views*/
+@media only screen and (max-width: 360px) {
     .jumbotron {
         width: 100%;
+    }
+
+    .jumbotron h1 {
+        font-size: 20px;
+    }
+
+    .jumbotron p {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (min-width: 381px) {
+    .jumbotron {
+        width: 100%;
+        height: 30vh;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .jumbotron {
+        width: 100%;
+        height: 40vh;
     }
 }
 
@@ -49,15 +74,7 @@ which needs to be the full width of the page*/
 @media only screen and (min-width: 600px) {
     .jumbotron {
         width: 100%;
-        height: 40vh;
-    }
-
-    .jumbotron h1 {
-        margin-left: 22vw;
-    }
-
-    .jumbotron h2 {
-        margin-left: 26vw;
+        height: 50vh;
     }
 
 }
@@ -69,28 +86,13 @@ which needs to be the full width of the page*/
         height: 60vh;
     }
 
-    .jumbotron h1 {
-        margin-left: 26vw;
-    }
-
-    .jumbotron h2 {
-        margin-left: 30vw;
-    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .jumbotron {
         width: 100%;
-        height: 80vh;
-    }
-
-    .jumbotron h1 {
-        margin-left: 30vw;
-    }
-
-    .jumbotron h2 {
-        margin-left: 32vw;
+        height: 90vh;
     }
 }
 
@@ -99,14 +101,6 @@ which needs to be the full width of the page*/
     .jumbotron {
         width: 100%;
         height: 90vh;
-    }
-
-    .jumbotron h1 {
-        margin-left: center;
-    }
-
-    .jumbotron h2 {
-        margin-left: center;
     }
 }
 
@@ -117,6 +111,11 @@ which needs to be the full width of the page*/
 .nav-link {
     color: #4bbbc3;
     font-size: 125%;
+}
+
+section>h2 {
+    padding-top: 70px;
+    text-align: center;
 }
 
 /*link changes from blue to a different blue shade and bold (if not bold already) when mouse hovers over it*/
@@ -131,10 +130,22 @@ a:active {
     font-weight: bold;
 }
 
-.card-title,
-.cardSubTitle,
+.card {
+    border-width: 4px;
+    border-color: #72e3eb;
+
+}
+
+.card-title{
+    color: #aeeaef;
+}
+
+.card-subtitle {
+    color:#72e3eb;
+}
+
 .card-text {
-    color: #4bbbc3
+    color: #4bbbc3;
 }
 
 
@@ -153,20 +164,12 @@ footer {
 
 #githubLogo:hover {
     animation-name: githubLogo;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 
-/* The animation code to rotate the image in 90degree increments */
+/* The animation code to rotate the image a full 360-degrees first clockwise and then anti-clockwise*/
 @keyframes githubLogo {
-    0% {
-        border-radius: 50%;
-    }
-
     50% {
         transform: rotate(360deg);
-    }
-
-    100% {
-        border-radius: 50%;
     }
 }
