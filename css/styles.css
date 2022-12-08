@@ -7,9 +7,110 @@ body {
     color: #4bbbc3;
 }
 
-h1,h2 {
-    font-family: Arial, Helvetica, sans-serif
+
+
+/*Styling and inserting of the jumbotron image
+which needs to be the full width of the page*/
+.jumbotron {
+    background-image: url(/images/julieUnionBuildings.jpg);
+    background-color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30vh;
 }
+
+/*h1 and h2 is styled before media queriers have been included*/
+.jumbotron h1 {
+    color: #4bbbc3;
+    margin-left: 18vw;
+    line-height: 1.5;
+}
+
+.jumbotron h2 {
+    color: #4bbbc3;
+    margin-left: 22vw;
+}
+
+
+/*The container is the entire jumbotron and its contents*/
+.container-jumbo {
+    padding-top: 7vh;
+
+}
+
+/*media queries needed for jumbotron picture in mobile view*/
+@media only screen and (max-width: 480px) {
+    .jumbotron {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .jumbotron {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .jumbotron h1 {
+        margin-left: 22vw;
+    }
+
+    .jumbotron h2 {
+        margin-left: 26vw;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .jumbotron {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .jumbotron h1 {
+        margin-left: 26vw;
+    }
+
+    .jumbotron h2 {
+        margin-left: 30vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .jumbotron {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .jumbotron h1 {
+        margin-left: 30vw;
+    }
+
+    .jumbotron h2 {
+        margin-left: 32vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .jumbotron {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .jumbotron h1 {
+        margin-left: center;
+    }
+
+    .jumbotron h2 {
+        margin-left: center;
+    }
+}
+
+
 
 /* styling targeting all the navbar text*/
 .navbarBrandName,
@@ -30,7 +131,9 @@ a:active {
     font-weight: bold;
 }
 
-.card-title, .cardSubTitle, .card-text {
+.card-title,
+.cardSubTitle,
+.card-text {
     color: #4bbbc3
 }
 
@@ -38,9 +141,9 @@ a:active {
 footer {
     text-align: center;
     background-color: black;
-  }  
-  
-  /* The first element to apply the animation to */
+}
+
+/* The first element to apply the animation to */
 #githubLogo {
     margin: 1%;
     width: 100px;
