@@ -13,7 +13,7 @@ body {
 /*Styling and inserting of the jumbotron image
 which needs to be the full width of the page*/
 .jumbotron {
-    background-image: url(/images/julieUnionBuildings.jpg);
+    background-image: url(/images/julieUBuildings.jpg);
     background-color: black;
     background-size: 100%;
     background-repeat: no-repeat;
