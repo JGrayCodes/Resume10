@@ -118,7 +118,7 @@ section>h2 {
     padding-top: 70px;
     color: #4bbbc3;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 /*Text content in the About Me section needs padding to start a bit below the image that it's in line with*/
@@ -138,11 +138,6 @@ a:active {
     color: rgb(244, 50, 163);
     font-weight: bold;
 }
-
-#extraPadding {
-    margin-bottom: 5vh;
-}
-
 
 /*Customizing the cards for the Experience section*/
 .card {
