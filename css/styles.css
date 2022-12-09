@@ -141,6 +141,16 @@ a:active {
     color: lightgray;
 }
 
+
+ .no-bullets {
+    list-style-type: none;
+    padding: 0;
+} 
+
+.list-group-item {
+    color: lightgray;
+} 
+
 footer {
     text-align: center;
     background-color: black;

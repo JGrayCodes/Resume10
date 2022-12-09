@@ -8,13 +8,14 @@
     <title>Resumé Julie Gray</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
 
     <header>
+        <!-- Used this bootstrap jumbotron for responsiveness-->
         <div class="jumbotron jumbotron-fluid responsive">
             <div class="container-jumbo justify-content-center align-items-center">
                 <h1 class="display-6 fw-semibold" id="jumbotronHeader1">Hello World! I'm Julie Gray</h1>
@@ -26,12 +27,13 @@
 
     <main>
 
-        <!-- Bootstrap Navigation bar code follows-->
+        <!-- Bootstrap sticky-top Navigation bar code used to fix Navbar at top-->
         <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" aria-current="page" href="#"><img src="images/julieAsHermione2.jpg"
                         alt="smallProfilePic" width="40" height="32" class="d-inline-block align-text-center"> <span
-                        class="navbarBrandName"> Julie Gray</span> <!-- This navbar link takes you to the top of the page-->
+                        class="navbarBrandName"> Julie Gray</span>
+                    <!-- The above navbar link takes you to the top of the page-->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDarkNav"
                     data-bs-auto-close="outside" aria-controls="navbarDarkNav" aria-expanded="false"
@@ -40,7 +42,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarDarkNav">
                     <ul class="navbar-nav ms-auto">
-                        <!--use bootstrap class of ms-auto to align items to the right!-->
+                        <!--used bootstrap class of ms-auto to align items to the right!-->
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About Me</a>
                         </li>
@@ -68,7 +70,40 @@
             <!-- More about me follows below-->
             <section>
                 <h2 id="about">More About Me</h2>
-                <div class="container text-center align-items-center">
+                <div class="container">
+                    <!-- <div class="col-6">
+                       <div class="card text-bg-dark h-100">
+                            <img src="images/LimestoneLogo.jpg" class="card-img-center"
+                                alt="Limestone Residential Properties Logo">
+                            <div class="card-body">
+                                <h3 class="card-title mb-3 text-center">Rental Manager at Limestone Properties</h3>
+                                <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
+                                <ul class="card-text">
+                                    <li> Managing a portfolio of properties (managed and once off leases) on
+                                        PropWorx Property
+                                        Management
+                                        Software and TPN Credit Bureau </li>
+
+                                    <div class="row justify-content-evenly g-2">
+                                        <div class="col-6">
+                                            <div class="card text-bg-dark h-100">
+                                                <div class="card-body">
+                                                    <h3 class="card-title mb-3 text-center"> Training Coordinator at
+                                                        LifeLine Pretoria
+                                                    </h3>
+                                                    <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
+                                                    <ul class="card-text">
+                                                        <li> Attending to any course queries by prospective course
+                                                            participants, and
+                                                            updating the mailing lists.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div> -->
+
+                             <div class="container text-center align-items-center">
                     <div class="row justify-content-center g-2">
                         <div class="col coloredBorder4">
                             <picture>
@@ -93,7 +128,7 @@
                                 Education) which incorporates HTML, CSS and Bootstrap. </p>
                         </div>
                     </div>
-                </div>
+                </div> 
             </section>
 
             <!-- Education section follows below in a bootstrap grid with 2 columns-->
@@ -249,28 +284,36 @@
             </section>
 
             <!-- Skills section follows below-->
-            <section class="justLists">
+            <section>
                 <h2 id="skills">Skills</h2>
                 <div class="container text-center">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                            <p> Data entry and Data analysis</p>
-                            <p> Analytical skills</p>
-                            <p> Written communication</p>
-                            <p> Teamwork and Collaboration</p>
-                            <p> Strong work ethic</p>
-                            <p> Zoom</p>
-                            <p> Coding in HTML and CSS</p>
-                            <p> PropWorx Property Management</p>
-                            <p> TPN Credit Bureau</p>
-                        </div>
+                    <div class="col-md-6 offset-md-3">
+                       <!-- <ul class="no-bullets">
+                            <li> Data entry and Data analysis</li>
+                            <li> Analytical skills</li>
+                            <li> Written communication</li>
+                            <li> Teamwork and Collaboration</li>
+                            <li> Strong work ethic</li>
+                            <li> Zoom</li>
+                            <li> Coding in HTML and CSS</li>
+                            <li> PropWorx Property Management</li>
+                            <li> TPN Credit Bureau</li>
+                        </ul> -->
+                        <ul class="list-group">
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Data entry and Data analysis</li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Dapibus ac facilisis in</li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Morbi leo risus</li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Porta ac consectetur ac</li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Vestibulum at eros</li>
+                        </ul>
+
                     </div>
                 </div>
 
             </section>
 
             <!-- Interests section follows below-->
-            <section class="justLists">
+            <section>
                 <h2 id="interests">My Interests</h2>
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-indicators">
