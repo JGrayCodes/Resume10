@@ -4,9 +4,8 @@
 
 body {
     background-color: black;
-    color: #4bbbc3;
+    color: rgb(211, 211, 211);
 }
-
 
 
 /*Styling and inserting of the jumbotron image
@@ -30,14 +29,12 @@ which needs to be the full width of the page*/
 .jumbotron p {
     color: #4bbbc3;
     text-align: center;
-
 }
 
 
 /*The container is the entire jumbotron and its contents*/
 .container-jumbo {
     padding-top: 7vh;
-
 }
 
 /*media queries needed for jumbotron picture in mobile views*/
@@ -53,7 +50,6 @@ which needs to be the full width of the page*/
     .jumbotron p {
         font-size: 18px;
     }
-
 }
 
 @media only screen and (min-width: 381px) {
@@ -76,7 +72,6 @@ which needs to be the full width of the page*/
         width: 100%;
         height: 50vh;
     }
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -85,7 +80,6 @@ which needs to be the full width of the page*/
         width: 100%;
         height: 60vh;
     }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -104,8 +98,6 @@ which needs to be the full width of the page*/
     }
 }
 
-
-
 /* styling targeting all the navbar text*/
 .navbarBrandName,
 .nav-link {
@@ -115,7 +107,9 @@ which needs to be the full width of the page*/
 
 section>h2 {
     padding-top: 70px;
+    color: #4bbbc3;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 /*link changes from blue to a different blue shade and bold (if not bold already) when mouse hovers over it*/
@@ -132,48 +126,55 @@ a:active {
 
 .card {
     border-width: 4px;
-    border-color: #72e3eb;
-
+    border-color: lightgray;
 }
 
 .card-title{
-    color: #aeeaef;
+    color: #4bbbc3;
 }
 
 .card-subtitle {
-    color:#72e3eb;
+    color: lightgray;
 }
 
 .card-text {
-    color: #4bbbc3;
+    color: lightgray;
 }
-
-.carousel-caption {
-    color: #4bbbc3;
-}
-
 
 footer {
     text-align: center;
     background-color: black;
 }
 
-/* The first element to apply the animation to */
+/*Animation of social media icon follows*/
+
+/* The element to apply the animation to */
 #githubLogo {
     margin: 1%;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
+/* The animation code when mouse clicks on the icon to zoom in and then out again*/
 #githubLogo:hover {
     animation-name: githubLogo;
     animation-duration: 1s;
 }
 
-/* The animation code to rotate the image a full 360-degrees first clockwise and then anti-clockwise*/
 @keyframes githubLogo {
     50% {
+        transform: scale(1.5);}
+}
+
+/* The animation code when mouse hovers over the icon to rotate the icon a full 360-degrees first clockwise and then anti-clockwise*/
+#githubLogo:active {
+    animation-name: githubLogo2;
+    animation-duration: 3s;
+}
+
+@keyframes githubLogo2 {
+    5% {
         transform: rotate(360deg);
     }
 }
