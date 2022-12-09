@@ -16,17 +16,15 @@
 
     <header>
         <!-- Used this bootstrap jumbotron for responsiveness-->
-        <div class="jumbotron jumbotron-fluid responsive">
-            <div class="container-jumbo justify-content-center align-items-center">
-                <h1 class="display-6 fw-semibold" id="jumbotronHeader1">Hello World! I'm Julie Gray</h1>
-                <p class="display-6" id="jumbotronHeader2">Welcome to my Resumé</p>
+        <div class="jumbotron">
+            <div class="container-jumbo">
+                <h1 class="display-6 fw-semibold">Hello World! I'm Julie Gray</h1>
+                <p class="display-6">Welcome to my Resumé</p>
             </div>
         </div>
-
     </header>
 
     <main>
-
         <!-- Bootstrap sticky-top Navigation bar code used to fix Navbar at top-->
         <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
@@ -67,54 +65,22 @@
 
 
         <article class="content">
-            <!-- More about me follows below-->
+            <!-- Grid with picture element and more about me (including a "message me" modal form) follows below-->
             <section>
                 <h2 id="about">More About Me</h2>
+
                 <div class="container">
-                    <!-- <div class="col-6">
-                       <div class="card text-bg-dark h-100">
-                            <img src="images/LimestoneLogo.jpg" class="card-img-center"
-                                alt="Limestone Residential Properties Logo">
-                            <div class="card-body">
-                                <h3 class="card-title mb-3 text-center">Rental Manager at Limestone Properties</h3>
-                                <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
-                                <ul class="card-text">
-                                    <li> Managing a portfolio of properties (managed and once off leases) on
-                                        PropWorx Property
-                                        Management
-                                        Software and TPN Credit Bureau </li>
-
-                                    <div class="row justify-content-evenly g-2">
-                                        <div class="col-6">
-                                            <div class="card text-bg-dark h-100">
-                                                <div class="card-body">
-                                                    <h3 class="card-title mb-3 text-center"> Training Coordinator at
-                                                        LifeLine Pretoria
-                                                    </h3>
-                                                    <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
-                                                    <ul class="card-text">
-                                                        <li> Attending to any course queries by prospective course
-                                                            participants, and
-                                                            updating the mailing lists.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div> -->
-
-                             <div class="container text-center align-items-center">
-                    <div class="row justify-content-center g-2">
-                        <div class="col coloredBorder4">
+                    <div class="row g-2">
+                        <div class="col">
                             <picture>
                                 <source media="(max-width: 650px)" srcset="images/julieFullLength.jpg">
                                 <source media="(max-width: 1000px" srcset="images/julieMidLength.jpg">
                                 <img src="images/julieMidLengthLg.jpg" alt="Julie Profile Photo">
                             </picture>
                         </div>
-                        <div class="col coloredBorder4">
+                        <div id="contPositioning" class="col">
                             <h3> Hi, I'm Julie (but you can call me Jules) </h3>
-                            <p> I am a dedicated, responsible, hard-working, and creative-thinking individual with a
+                            <p> I'm a dedicated, responsible, hard-working, and creative-thinking individual with a
                                 friendly
                                 personality and
                                 a good sense of humour.</p>
@@ -122,21 +88,60 @@
                                 problems
                                 and I find that coding
                                 is a great way to engage in this activity! </p>
-                            <p> In fact, what you are viewing now is a resumé project for my current course (for more,
+                            <p> In fact, what you are viewing now is a resumé project for my current course (for
+                                more,
                                 see
                                 under
                                 Education) which incorporates HTML, CSS and Bootstrap. </p>
+
+                            <!-- Decided against putting the Modal form closer to the top of the code and added it here to be under the About me content-->
+                            <div class="container-modal mt-2">
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                    data-bs-target="#messageMeModal" data-bs-whatever="msg">MESSAGE ME</button>
+
+                                <div class="modal fade" id="messageMeModal" tabindex="-1"
+                                    aria-labelledby="messageMeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content bg-dark">
+                                            <div class="modal-header bg-dark">
+                                                <h5 class="modal-title" id="messageMeModalLabel">New message</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="recipient-name" class="col-form-label">From:</label>
+                                                        <input type="email" class="form-control" id="userEmail"
+                                                            placeholder="name@example.com">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text"
+                                                            class="col-form-label">Message:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn" data-bs-dismiss="modal">Send
+                                                    message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </section>
 
-            <!-- Education section follows below in a bootstrap grid with 2 columns-->
+            <!-- Education section follows below in a bootstrap grid with 2 columns and a link opening in a new tab-->
             <section>
                 <h2 id="education">Education and Certificates</h2>
                 <div class="container text-center">
-                    <div class="row justify-content-evenly g-2">
-                        <div class="col coloredBorder4">
+                    <div class="row justify-content-evenly g-5">
+                        <div class="col">
                             <h3> Intro to Web at
                                 <a href="https://www.codespace.co.za/" rel="noopener noreferrer nofollow"
                                     target="blank"> Codespace Academy
@@ -146,7 +151,7 @@
                                 completed the first section namely "Intro to Web" and am busy with Web Design.
                             </p>
                         </div>
-                        <div class="col coloredBorder4">
+                        <div class="col">
                             <h3> BComm (Accounting Sciences) at the University of Pretoria</h3>
                             <p> I completed the degree <em>Baccalaureus Commercii</em> with specialization in Accounting
                                 Sciences at the end of 2009.
@@ -161,8 +166,9 @@
                  and going to 2 columns then 1 column when screen size gets smaller -->
             <section>
                 <h2 id="experience">Experience</h2>
-                <div class="container">
+                <div id="extraPadding" class="container">
                     <div class="row justify-content-evenly g-2">
+
                         <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/LifeLineLogo.jpg" class="card-img-top" alt="LifeLine Logo">
@@ -172,21 +178,10 @@
                                     <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
                                     <ul class="card-text">
                                         <li> Attending to any course queries by prospective course participants, and
-                                            updating the mailing lists.</li>
+                                            updating the mailing lists</li>
                                         <li> Collating the registration information for course participants and liaising
-                                            with the Accounts Department to follow up on arrear payments.</li>
-                                        <li> Coordinating Volunteers as presenters for the online courses.</li>
-                                        <li> Sending out the course material and other necessary information
-                                            to the course participants and facilitators/trainers.</li>
-                                        <li> Scheduling and hosting the above-mentioned online courses,
-                                            and assisting the course participants and facilitators/trainers with any
-                                            technical issues while in the courses on Zoom.</li>
-                                        <li> Coordinating Volunteers as Panel Members for interviews for selection as
-                                            either
-                                            a probationary lay counsellors or as a full lay counsellors.</li>
-                                        <li> Collating the details of course participants
-                                            for the printing of the course certificates after the successful completion
-                                            of a course.</li>
+                                            with the Accounts Department to follow up on arrear payments</li>
+                                        <li> Coordinating Volunteers as presenters for the online courses</li>
                                     </ul>
                                 </div>
                             </div>
@@ -201,33 +196,17 @@
                                     <h4 class="card-subtitle mb-3 text-center"> Key Duties</h4>
                                     <ul class="card-text">
                                         <li> Managing a portfolio of properties (managed and once off leases) on
-                                            PropWorx Property
-                                            Management
-                                            Software and TPN Credit Bureau </li>
-                                        <li> Performing credit checks on prospective tenants via the TPN Credit
-                                            Bureau</li>
-                                        <li> Loading and updating lease and payment information onto the PropWorx
-                                            Property Management
-                                            Software
-                                            and the TPN Credit Bureau </li>
+                                            PropWorx Property Management Software and TPN Credit Bureau </li>
                                         <li> Invoicing tenants, receipting rental, processing landlord payments and
                                             emailing landlord and
                                             tenant
                                             statements</li>
-                                        <li> Advising the maintenance coordinator of property maintenance issues
-                                        </li>
-                                        <li> Reconciling owner, tenant, and municipal accounts</li>
                                         <li> Calculating and submitting agent commissions for payment</li>
-                                        <li> Calculating and loading rental and other costs due for debit order
-                                            collection</li>
-                                        <li> Importing trust account bank statements into PropWorx and performing
-                                            bank account
-                                            reconciliations
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/SeeffLogo.jpg" class="card-img-top" alt="Seeff Properties Logo">
@@ -239,23 +218,16 @@
                                         <li> Loading lease information onto the PropWorx Property Management System as
                                             well as loading
                                             and
-                                            submitting payments and charges from rental received.</li>
+                                            submitting payments and charges from rental received</li>
                                         <li> Emailing statements to owners and tenants, and liaising with clients
                                             regarding account
-                                            queries.
-                                        </li>
-                                        <li> Reconciling owner, tenant and municipal accounts.</li>
-                                        <li> Debtors Reconciliation and Debt Collection</li>
-                                        <li> Creditors Reconciliation and submission of amounts due for payments.</li>
-                                        <li> Calculating and submitting agent commissions and salaries for payment.</li>
-                                        <li> Calculating and submitting VAT returns and payments.</li>
-                                        <li> Calculating and submitting PAYE returns and payments.</li>
-                                        <li> Importing bank statements into PropWorx and performing bank account
-                                            reconciliations.</li>
+                                            queries</li>
+                                        <li> Reconciling owner, tenant, and municipal accounts</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-6 col-lg-3">
                             <div class="card text-bg-dark h-100">
                                 <img src="images/A2BtransfersDotComLogo.jpg" class="card-img-top"
@@ -270,7 +242,6 @@
                                         <li> Performing Creditors Reconciliation</li>
                                         <li> Performing Credit Card Receipt Reconciliations</li>
                                         <li> Calculating and submitting Euro VAT claims</li>
-                                        <li> Authorizing refunds or compensation to clients</li>
                                         <li> Capturing bank statements on Pastel and and performing bank account
                                             reconciliations
                                         </li>
@@ -278,90 +249,101 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
             </section>
 
-            <!-- Skills section follows below-->
+            <!-- Skills section follows below in a grid with unordered list and bootstrap icons as decoration-->
             <section>
                 <h2 id="skills">Skills</h2>
-                <div class="container text-center">
+                <div id="extraPadding" class="container text-center">
                     <div class="col-md-6 offset-md-3">
-                       <!-- <ul class="no-bullets">
-                            <li> Data entry and Data analysis</li>
-                            <li> Analytical skills</li>
-                            <li> Written communication</li>
-                            <li> Teamwork and Collaboration</li>
-                            <li> Strong work ethic</li>
-                            <li> Zoom</li>
-                            <li> Coding in HTML and CSS</li>
-                            <li> PropWorx Property Management</li>
-                            <li> TPN Credit Bureau</li>
-                        </ul> -->
                         <ul class="list-group">
-                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Data entry and Data analysis</li>
-                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Dapibus ac facilisis in</li>
-                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Morbi leo risus</li>
-                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Porta ac consectetur ac</li>
-                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Vestibulum at eros</li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Data entry and
+                                Data analysis <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Analytical
+                                skills <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Written
+                                communication <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Teamwork and
+                                Collaboration <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Strong work
+                                ethic <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Zoom
+                                <i class="bi bi-star-fill ms-1"></i>
+                            </li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>Coding in HTML
+                                and CSS <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>PropWorx
+                                Property Management <i class="bi bi-star-fill ms-1"></i></li>
+                            <li class="list-group-item bg-black"><i class="bi bi-star-fill me-2"></i></i>TPN Credit
+                                Bureau <i class="bi bi-star-fill ms-1"></i></li>
                         </ul>
-
                     </div>
                 </div>
 
             </section>
 
-            <!-- Interests section follows below-->
+            <!-- Interests section follows below which uses a bootstrap Carousel-->
             <section>
                 <h2 id="interests">My Interests</h2>
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div id="carouselInterestCaptions" class="carousel slide" data-bs-ride="false">
+
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselInterestCaptions" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselInterestCaptions" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselInterestCaptions" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
+
                         <div class="carousel-item active">
                             <img src="images/sudokuCarousel.jpg" class="d-block w-100" alt="Sudoku">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Solving puzzles (like jigsaw puzzles and sudoku)</h5>
+                                <h5>Solving different puzzles</h5>
                             </div>
                         </div>
+
                         <div class="carousel-item">
                             <img src="images/quizCarousel.jpg" class="d-block w-100" alt="Quiz Nights SA">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Attending quiz nights</h5>
                             </div>
                         </div>
+
                         <div class="carousel-item">
                             <img src="images/cockatooCarousel.jpg" class="d-block w-100" alt="Cockatoo">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Spending time with Peaches, my pet cockatoo</h5>
+                                <h5>Spending time with my pet cockatoo</h5>
                             </div>
                         </div>
+
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterestCaptions"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselInterestCaptions"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                    
                 </div>
 
-
             </section>
+
         </article>
 
     </main>
 
+    <!--Social media icon link in the footer to open in new tab and also animated using css-->
     <footer>
         <a href="https://github.com/JGrayCodes" rel="noopener noreferrer" target="_blank">
             <div>
@@ -370,7 +352,6 @@
                 <!-- need to give image an id to target image properties specifically (e.g. border-radius) in css-->
             </div>
         </a>
-
 
     </footer>
 

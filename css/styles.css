@@ -1,10 +1,12 @@
+/*boiler plate*/
 * {
     box-sizing: border-box;
 }
 
+/*Want a dark background and light gray text color - imitating "dark mode" */
 body {
     background-color: black;
-    color: rgb(211, 211, 211);
+    color: lightgray;
 }
 
 
@@ -32,12 +34,12 @@ which needs to be the full width of the page*/
 }
 
 
-/*The container is the entire jumbotron and its contents*/
+/*adding padding so that text shifts down in the jumbotron*/
 .container-jumbo {
     padding-top: 7vh;
 }
 
-/*media queries needed for jumbotron picture in mobile views*/
+/*media queries needed for jumbotron picture and skills list items in mobile view*/
 @media only screen and (max-width: 360px) {
     .jumbotron {
         width: 100%;
@@ -50,8 +52,13 @@ which needs to be the full width of the page*/
     .jumbotron p {
         font-size: 18px;
     }
+
+    .list-group-item {
+        font-size: 12px;
+    }
 }
 
+/*media queries needed for jumbotron picture in other views*/
 @media only screen and (min-width: 381px) {
     .jumbotron {
         width: 100%;
@@ -105,6 +112,8 @@ which needs to be the full width of the page*/
     font-size: 125%;
 }
 
+/*Section headings get padding because of the sticky-top navbar and to give extra 
+space between contents and headings of the different sections also more text customization here*/
 section>h2 {
     padding-top: 70px;
     color: #4bbbc3;
@@ -112,24 +121,36 @@ section>h2 {
     padding-bottom: 20px;
 }
 
-/*link changes from blue to a different blue shade and bold (if not bold already) when mouse hovers over it*/
+/*Text content in the About Me section needs padding to start a bit below the image that it's in line with*/
+#contPositioning {
+    padding-top: 25px;
+}
+
+
+/*any link changes from blue to a different blue shade and bold (if not bold already) when mouse hovers over it*/
 a:hover {
     color: #54d2db;
     font-weight: bold;
 }
 
-/*link changes from blue to a very light gray and bold (if not bold already) when mouse clicks it*/
+/*link changes from above blueish shade to a brightish pink and bold (if not bold already) when mouse clicks it*/
 a:active {
-    color: rgb(223, 229, 234);
+    color: rgb(244, 50, 163);
     font-weight: bold;
 }
 
+#extraPadding {
+    margin-bottom: 5vh;
+}
+
+
+/*Customizing the cards for the Experience section*/
 .card {
     border-width: 4px;
     border-color: lightgray;
 }
 
-.card-title{
+.card-title {
     color: #4bbbc3;
 }
 
@@ -141,15 +162,19 @@ a:active {
     color: lightgray;
 }
 
-
- .no-bullets {
+/*Customizing the list of Skills*/
+.no-bullets {
     list-style-type: none;
     padding: 0;
-} 
+}
 
 .list-group-item {
     color: lightgray;
-} 
+}
+
+.bi-star-fill {
+    color: #4bbbc3;
+}
 
 footer {
     text-align: center;
@@ -174,7 +199,8 @@ footer {
 
 @keyframes githubLogo {
     50% {
-        transform: scale(1.5);}
+        transform: scale(1.5);
+    }
 }
 
 /* The animation code when mouse hovers over the icon to rotate the icon a full 360-degrees first clockwise and then anti-clockwise*/
